@@ -1,5 +1,7 @@
 # https://leetcode.com/problems/rotting-oranges/description/
 
+from typing import List
+
 def orangesRotting(grid: List[List[int]]) -> int:
     queue = []
     ans = -1
