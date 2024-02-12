@@ -7,7 +7,6 @@
 
 # The test cases are generated such that the number of unique combinations that sum up to target is less than 150 combinations for the given input.
 
- 
 
 # Example 1:
 
@@ -16,6 +15,8 @@
 # Explanation:
 # 2 and 3 are candidates, and 2 + 2 + 3 = 7. Note that 2 can be used multiple times.
 # 7 is a candidate, and 7 = 7.
+# https://leetcode.com/problems/combination-sum/description/
+
 # These are the only two combinations.
 
 # Example 2:
