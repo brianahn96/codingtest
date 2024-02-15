@@ -17,11 +17,11 @@ def backtracking(depth, index):
             for j in range(N):
                 if i == j:
                     continue
-                if visited[i] and visited[j]: #5
+                if visited[i] and visited[j]:
                     power1 += grids[i][j]
-                elif not visited[i] and not visited[j]: #6
+                elif not visited[i] and not visited[j]:
                     power2 += grids[i][j]
-        minimum = min(minimum, abs(power1-power2)) #7
+        minimum = min(minimum, abs(power1-power2)) 
         return
     
     for i in range(index, N):
