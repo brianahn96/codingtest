@@ -27,7 +27,3 @@ def longestConsecutive(nums: List[int]) -> int:
                 length += 1
             longest = max(longest, length)
     return length
-
-arr = [6, 7, 3, 1, 100, 102, 6, 12]
-
-print(longestConsecutive(arr))

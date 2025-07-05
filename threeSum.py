@@ -44,8 +44,8 @@ def threeSum(nums: List[int]) -> List[List[int]]:
             else:
                 tri = [nums[i], nums[left], nums[right]]
                 ans.append(tri)
-                while left < right and nums[left] == tri[1]:
+                while left < right and nums[left] == nums[left + 1]:
                     left += 1
-                while left < right and nums[right] == tri[2]:
+                while left < right and nums[right] == nums[right - 1]:
                     right -= 1
     return ans
