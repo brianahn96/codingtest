@@ -16,9 +16,7 @@
 # Input: nums = [1]
 # Output: [[1]]
 
-from typing import List
-
-def permute(nums: List[int]) -> List[List[int]]:
+def permute(nums: list[int]) -> list[list[int]]:
     results = []
     records = []
     

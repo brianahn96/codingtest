@@ -13,17 +13,21 @@
 # Input: s = "cbacdcbc"
 # Output: "acdb"
 
-from collections import Counter
-
 def removeDuplicateLetters(s: str) -> str:
-    counter, stack = Counter(s), []
-    
-    for char in s:
-        counter[char] -= 1
-        if char in stack:
+    last = {char : i for i, char in enumerate(s)}
+    stack = []
+    seen = set()
+
+    for i, char in enumerate(s):
+        if char in seen:
             continue
-        while stack and stack[-1] and counter[stack[-1]] > 0:
-            stack.pop()
+        while stack and char < stack[-1] and last[stack[-1]] > i:
+            seen.remove(stack.pop())
         stack.append(char)
+        seen.add(char)
     
     return ''.join(stack)
+
+s = "cbacdcbc"
+
+removeDuplicateLetters(s)
