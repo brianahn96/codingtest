@@ -6,6 +6,7 @@ def combine(n: int, k: int) -> list[list[int]]:
     def dfs(elements, start: int, k: int):
         if k == 0:
             results.append(elements[:])
+            return
             
         for i in range(start, n + 1):
             elements.append(i)

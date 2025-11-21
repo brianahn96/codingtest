@@ -30,15 +30,12 @@ def searchMatrix(matrix: List[List[int]], target: int) -> bool:
         if firstrows[left] == target or firstrows[right] == target:
             return True
         
-        if (right - left) <= 1:
-            break
-        
         mid = (left + right) // 2
 
         if firstrows[mid] < target:
-            left = mid
+            left = mid + 1
         elif firstrows[mid] > target:
-            right = mid
+            right = mid - 1
         else:
             return True
 
