@@ -24,6 +24,7 @@ def orangesRotting(grid: List[List[int]]) -> int:
                     grid[new_x][new_y] = 2
                     queue.append((new_x, new_y))
         ans += 1
+        
     for i in grid:
         for j in i:
             if j == 1:

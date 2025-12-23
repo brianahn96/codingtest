@@ -1,14 +1,13 @@
 # https://leetcode.com/problems/merge-k-sorted-lists/description/?envType=problem-list-v2&envId=heap-priority-queue
 
 import heapq
-from typing import List
 
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
 
-def mergeKLists(self, lists: List[ListNode]) -> ListNode:
+def mergeKLists(lists: list[ListNode]) -> ListNode:
     root = result = ListNode(None)
     heap = []
     
