@@ -2,8 +2,6 @@
 
 # You must write an algorithm that runs in O(n) time.
 
- 
-
 # Example 1:
 
 # Input: nums = [100,4,200,1,3,2]
@@ -14,9 +12,7 @@
 # Input: nums = [0,3,7,2,5,8,4,6,0,1]
 # Output: 9
 
-from typing import List
-
-def longestConsecutive(nums: List[int]) -> int:
+def longestConsecutive(nums: list[int]) -> int:
     longest = 0
     num_set = set(nums)
 
@@ -26,4 +22,4 @@ def longestConsecutive(nums: List[int]) -> int:
             while n+length in num_set:
                 length += 1
             longest = max(longest, length)
-    return length
+    return longest

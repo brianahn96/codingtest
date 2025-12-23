@@ -25,10 +25,10 @@ def maxDepthBFS(root: Optional[TreeNode]) -> int:
     while queue:
         depth += 1
         for _ in range(len(queue)):
-            curroot = queue.popleft()
-            if curroot.left:
-                queue.append(curroot.left)
-            if curroot.right:
-                queue.append(curroot.right)
+            current = queue.popleft()
+            if current.left:
+                queue.append(current.left)
+            if current.right:
+                queue.append(current.right)
     
     return depth

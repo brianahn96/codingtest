@@ -37,7 +37,7 @@ def letterCombinations(digits: str) -> List[str]:
         
         for i in range(index, len(digits)):
             for letter in dic[digits[i]]:
-                dfs(index + 1, path + letter)
+                dfs(i + 1, path + letter)
                 
     dfs(0, "")
     

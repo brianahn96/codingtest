@@ -25,7 +25,7 @@
 # Input: piles = [30,11,23,4,20], h = 6
 # Output: 23
 
-from collections import List
+from typing import List
 import math
 
 def minEatingSpeed(piles: List[int], h: int) -> int:
@@ -43,3 +43,25 @@ def minEatingSpeed(piles: List[int], h: int) -> int:
             right = mid - 1
     
     return answer
+
+def minEatingSpeed2(piles: List[int], h: int) -> int:
+    left, right = 1, max(piles)
+    
+    while left < right:
+        mid = (left + right) // 2
+        
+        # for pile in piles:
+        #     hour = math.ceil(pile / mid)
+        hours = sum(math.ceil(pile / mid) for pile in piles)
+        print(hours)
+        if hours > h:
+            left = mid + 1
+        else:
+            right = mid
+    
+    return left
+            
+piles = [3,6,7,11]
+h = 8
+
+minEatingSpeed2(piles, h)
