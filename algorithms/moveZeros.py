@@ -1,17 +1,15 @@
 # https://leetcode.com/problems/move-zeroes/description/?envType=study-plan-v2&envId=leetcode-75
 
-
 def moveZeroes(nums: list[int]) -> None:
-    index = 0
+    insert = 0
 
-    while index < len(nums):
-        if nums[index] == 0 and index < len(nums) - 1:
-            right = index
-            while right < len(nums) and nums[right] == 0:
-                right += 1
-            if right < len(nums):
-                nums[index], nums[right] = nums[right], nums[index]
-        index += 1
+    for i in range(len(nums)):
+        if nums[i] != 0:
+            nums[insert] = nums[i]
+            insert += 1
+
+    for i in range(insert, len(nums)):
+        nums[i] = 0
 
 def moveZeroesOptimized(nums: list[int]) -> None:
     n = len(nums)

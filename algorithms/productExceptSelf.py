@@ -15,9 +15,7 @@
 # Input: nums = [-1,1,0,-3,3]
 # Output: [0,0,9,0,0]
 
-from typing import List
-
-def productExceptSelf(nums: List[int]) -> List[int]:
+def productExceptSelf(nums: list[int]) -> list[int]:
     first = []
     mul = 1
     for i in reversed(range(1, len(nums))):
@@ -34,3 +32,18 @@ def productExceptSelf(nums: List[int]) -> List[int]:
         last.append(ele)
         mul = ele
     return [a * b for a, b in zip(first, last)]
+
+def productExceptSelf2(nums: list[int]) -> list[int]:
+    p = 1
+    res = []
+
+    for num in nums:
+        res.append(p)
+        p *= num
+    
+    p = 1
+    for i in range(len(nums) - 1, -1, -1):
+        res[i] = res[i] * p
+        p *= nums[i]
+
+    return res

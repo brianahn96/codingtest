@@ -8,7 +8,7 @@ def calcEquationDFS(equations: list[list[str]], values: list[float], queries: li
     for index,  (up, down) in enumerate(equations):
             mult[up][down] = values[index]
             mult[down][up] = 1 / values[index]
-
+    print(mult)
     def dfs(start, end, visited):
         if start not in mult or end not in mult:
             return -1.0
@@ -58,8 +58,19 @@ def calcEquationBFS(equations: list[list[str]], values: list[float], queries: li
                 mult[neighbor][start] = 1 / result
                 
                 visited.add(neighbor)
-                queue.append([neighbor,result])
+                queue.append((neighbor,result))
                 
         return -1.0
     
     return [bfs(start,end) for start,end in queries]
+
+
+equations = [["a","b"],["b","c"]]
+values = [2.0,3.0]
+queries = [["a","c"],["b","a"],["a","e"],["a","a"],["x","x"]]
+
+equations = [["a","b"],["b","c"],["bc","cd"]]
+values = [1.5,2.5,5.0]
+queries = [["a","c"],["c","b"],["bc","cd"],["cd","bc"]]
+
+print(calcEquationDFS(equations, values, queries))

@@ -24,8 +24,7 @@ def search(nums: List[int], target: int) -> int:
     left, right = 0, len(nums) - 1
     
     while left <= right:
-
-        mid = (left + right) // 2
+        mid = left + (right - left) // 2
         if nums[mid] < target:
             left = mid + 1
         elif nums[mid] > target:
@@ -33,3 +32,34 @@ def search(nums: List[int], target: int) -> int:
         else:
             return mid
     return -1
+
+def lower_bound(arr, target):
+    left, right = 0, len(arr)
+
+    while left < right:
+        mid = left + (right - left) // 2
+        if arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid
+
+    return left
+
+def upper_bound(arr, target):
+    left, right = 0, len(arr)
+
+    while left < right:
+        mid = left + (right - left) // 2
+        if arr[mid] <= target:
+            left = mid + 1
+        else:
+            right = mid
+
+    return left
+
+arr = [1, 2, 2, 2, 4, 5]
+# arr = [1, 2]
+target = 6
+print(lower_bound(arr, target))
+print(upper_bound(arr, target))
+# print(search(arr, target))

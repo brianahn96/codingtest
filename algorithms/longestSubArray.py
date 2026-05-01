@@ -5,7 +5,7 @@ def longestSubarray(nums: list[int]) -> int:
 
     for right in range(len(nums)):
         if nums[right] == 0:
-                zero_count += 1
+            zero_count += 1
 
         while zero_count > 1:
             if nums[left] == 0:
@@ -15,3 +15,6 @@ def longestSubarray(nums: list[int]) -> int:
         max_length = max(max_length, right - left)
 
     return max_length
+
+nums = [1,1,0,1]
+print(longestSubarray(nums))

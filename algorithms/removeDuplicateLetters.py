@@ -28,3 +28,6 @@ def removeDuplicateLetters(s: str) -> str:
 s = "cbacdcbc"
 
 removeDuplicateLetters(s)
+
+last = {char : i for i, char in enumerate(s)}
+print(last)

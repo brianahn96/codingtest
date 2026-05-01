@@ -28,9 +28,7 @@
 # Output: 11
 # Explanation: The original array was [11,13,15,17] and it was rotated 4 times. 
 
-from collections import List
-
-def findMin(nums: List[int]) -> int:
+def findMin(nums: list[int]) -> int:
     left, right = 0, len(nums) - 1
     
     while left <= right:
@@ -45,3 +43,21 @@ def findMin(nums: List[int]) -> int:
             right = mid - 1
         else:
             left = mid + 1
+            
+
+def findMin2(nums: list[int]) -> int:
+    left, right = 0, len(nums) - 1
+
+    while left < right:
+        mid = left + (right - left) // 2
+
+        if nums[mid] > nums[right]:
+            left = mid + 1
+        else:
+            right = mid
+
+    return nums[left]
+
+nums = [3,4,5,1,2]
+print(findMin(nums))
+print(findMin2(nums))
