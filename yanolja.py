@@ -1,6 +1,8 @@
 from collections import deque
 
 def func(maze):
+    # Time Complexity: O(N*M) where N is rows, M is columns (BFS)
+    # Space Complexity: O(N*M) for visited set and queue
     n, m = len(maze), len(maze[0])
     directions = [(0,1),(0,-1),(1,0),(-1,0)]
 
@@ -86,10 +88,15 @@ test_maze7 = [
 
 
 def find_expressions_to_100():
+    # Time Complexity: O(3^N) where N=9 (number of digit gaps)
+    # Space Complexity: O(N) for recursion stack depth
+    
     digits = "123456789"
     results = []
 
     def dfs(index: int, expr: str):
+        # Time Complexity: O(3^N) for exploring all operator combinations
+        # Space Complexity: O(N) for recursion stack
         if index == len(digits):
             if eval(expr) == 100:
                 results.append(expr)
@@ -112,6 +119,8 @@ def find_expressions_to_100():
 answers = find_expressions_to_100()
 
 def plusOne(digits: list[int]) -> list[int]:
+    # Time Complexity: O(N) where N is number of digits (worst case all 9s)
+    # Space Complexity: O(1) if not counting output, O(N) if carry creates new digit
     carry, i = 0, len(digits) - 1
 
     while i > -1:

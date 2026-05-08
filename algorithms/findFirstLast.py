@@ -1,3 +1,6 @@
+# Time Complexity: O(log n) - Two binary searches are performed
+# Space Complexity: O(1) - Only using constant extra space
+#
 # https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/
 
 def searchRange(nums: list[int], target: int) -> list[int]:

@@ -1,3 +1,6 @@
+# Time Complexity: O(J + S) where J is length of jewels, S is length of stones
+# Space Complexity: O(J) for the frequency map
+#
 # https://leetcode.com/problems/jewels-and-stones/description/
 
 def numJewelsInStones(jewels: str, stones: str) -> int:

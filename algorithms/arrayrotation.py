@@ -1,3 +1,6 @@
+# Time Complexity: O(N) where N is the length of the array
+# Space Complexity: O(N) for creating the rotated array
+#
 # Have the function ArrayRotation(arr) take the arr parameter being passed 
 # which will be an array of non-negative integers and circularly rotate the array starting from the Nth element where N is equal to the first integer in the array. 
 # For example: if arr is [2, 3, 4, 1, 6, 10] then your program should rotate the array starting from the 2nd position because the first element in the array is 2. 

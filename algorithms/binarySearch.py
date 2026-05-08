@@ -1,3 +1,6 @@
+# Time Complexity: O(log n) for binary search variants
+# Space Complexity: O(1) - Only using constant extra space
+#
 # https://leetcode.com/problems/binary-search/description/
 
 # Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. 
@@ -57,9 +60,28 @@ def upper_bound(arr, target):
 
     return left
 
+
+def binary(nums, target, findFirst):
+    s, e = 0, len(nums) - 1
+    ans = -1
+    while s <= e:
+        mid = (s + e) // 2
+        if target > nums[mid]:
+            s = mid + 1
+        elif target < nums[mid]:
+            e = mid - 1
+        else:
+            ans = mid
+            if findFirst:
+                e = mid - 1
+            else:
+                s = mid + 1
+    return ans
 arr = [1, 2, 2, 2, 4, 5]
 # arr = [1, 2]
-target = 6
+target = 3
 print(lower_bound(arr, target))
 print(upper_bound(arr, target))
+# print(binary(arr, target, True))
+# print(binary(arr, target, False))
 # print(search(arr, target))

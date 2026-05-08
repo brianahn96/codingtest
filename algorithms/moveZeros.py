@@ -1,3 +1,6 @@
+# Time Complexity: O(N) where N is the length of the array
+# Space Complexity: O(1) - Modifies array in-place
+#
 # https://leetcode.com/problems/move-zeroes/description/?envType=study-plan-v2&envId=leetcode-75
 
 def moveZeroes(nums: list[int]) -> None:

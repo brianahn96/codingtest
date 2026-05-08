@@ -1,3 +1,6 @@
+# Time Complexity: O(N log k) where N is the length of the array
+# Space Complexity: O(N) for counter and heap storage
+#
 # Given an integer array nums and an integer k, return the k most frequent elements. 
 # You may return the answer in any order.
 

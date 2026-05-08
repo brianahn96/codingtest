@@ -1,3 +1,6 @@
+# Time Complexity: O(N) where N is the length of the string
+# Space Complexity: O(N) for the stack in worst case
+#
 # Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
 # An input string is valid if:

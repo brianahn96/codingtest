@@ -1,3 +1,6 @@
+# Time Complexity: O(S + T) where S is length of s, T is length of t (for optimized version)
+# Space Complexity: O(1) - Hash maps store at most character set size
+#
 # https://leetcode.com/problems/minimum-window-substring/description/
 
 # Time Overflow

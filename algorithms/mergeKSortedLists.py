@@ -1,3 +1,6 @@
+# Time Complexity: O(N log K) where N is total nodes, K is number of lists
+# Space Complexity: O(K) for the heap storage
+#
 # https://leetcode.com/problems/merge-k-sorted-lists/description/?envType=problem-list-v2&envId=heap-priority-queue
 
 import heapq

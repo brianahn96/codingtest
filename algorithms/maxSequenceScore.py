@@ -1,3 +1,6 @@
+# Time Complexity: O(N log N) due to sorting and heap operations
+# Space Complexity: O(N) for storing sorted pairs and heap
+#
 # https://leetcode.com/problems/maximum-subsequence-score/description/
 
 import heapq

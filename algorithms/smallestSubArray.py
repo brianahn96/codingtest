@@ -1,3 +1,6 @@
+# Time Complexity: O(N) where N is the length of the array (sliding window)
+# Space Complexity: O(1) - Only using constant extra space
+#
 # https://leetcode.com/problems/minimum-size-subarray-sum/description/
 
 def minSubArrayLen(target: int, nums: list[int]) -> int:

@@ -1,3 +1,6 @@
+# Time Complexity: O(N^2) for naive, O(N) for sliding window version
+# Space Complexity: O(min(N, M)) where M is character set size
+#
 # Given a string s, find the length of the longest substring without repeating characters.
 
 # Example 1:

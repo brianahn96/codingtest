@@ -1,4 +1,6 @@
-
+# Time Complexity: O(N) where N is the length of the array
+# Space Complexity: O(N) for the set to track seen elements
+#
 # https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 
 def removeDuplicates(arr: list[int]) -> int:

@@ -1,9 +1,13 @@
 class Store:
     def __init__(self):
+        # Time Complexity: O(1)
+        # Space Complexity: O(1)
         self.values = list()
         self.map = dict()
         
     def insert(self, value: int) -> None:
+        # Time Complexity: O(1) average for dict lookup and list append
+        # Space Complexity: O(1)
         if value in self.map:
             return
         
@@ -11,6 +15,8 @@ class Store:
         self.map[value] = len(self.values) - 1
         
     def remove(self, value: int) -> None:
+        # Time Complexity: O(1) average for dict operations
+        # Space Complexity: O(1)
         if value not in self.map:
             return
         
@@ -24,6 +30,8 @@ class Store:
         del self.map[value]
         
     def get_random(self) -> int:
+        # Time Complexity: O(1)
+        # Space Complexity: O(1)
         import random
         return random.choice(self.values)
         

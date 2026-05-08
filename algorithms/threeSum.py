@@ -1,3 +1,6 @@
+# Time Complexity: O(N^2) where N is the length of the array
+# Space Complexity: O(1) or O(N) depending on sorting implementation
+#
 # Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] 
 # such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
 

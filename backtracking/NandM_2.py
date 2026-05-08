@@ -4,6 +4,10 @@ N, M = map(int, input().split())
 
 s = []
 def backtracking(index):
+    """
+    Time Complexity: O(C(N, M) * M) where C(N, M) = N! / (M!(N-M)!)
+    Space Complexity: O(M) for the recursion stack and state list.
+    """
     if len(s) == M:
         print(" ".join(map(str, s)))
         return

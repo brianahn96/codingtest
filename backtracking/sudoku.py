@@ -12,18 +12,30 @@ for i in range(9):
             blank.append([i, j])
 
 def checkRow(x, value):
+    """
+    Time Complexity: O(1) as it always checks 9 cells.
+    Space Complexity: O(1)
+    """
     for i in range(9):
         if graph[x][i] == value:
             return False
     return True
 
 def checkCol(y, value):
+    """
+    Time Complexity: O(1) as it always checks 9 cells.
+    Space Complexity: O(1)
+    """
     for i in range(9):
         if graph[i][y] == value:
             return False
     return True
 
 def checkRect(x, y, value):
+    """
+    Time Complexity: O(1) as it always checks 9 cells (3x3).
+    Space Complexity: O(1)
+    """
     dx = x // 3 * 3
     dy = y // 3 * 3
     for i in range(3):
@@ -33,6 +45,10 @@ def checkRect(x, y, value):
     return True
 
 def dfs(index):
+    """
+    Time Complexity: O(9^K) where K is the number of blank spaces.
+    Space Complexity: O(K) for recursion stack.
+    """
     if index == len(blank):
         for i in range(9):
             print(*graph[i])

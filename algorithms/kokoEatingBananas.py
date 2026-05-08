@@ -1,3 +1,6 @@
+# Time Complexity: O(N * log M) where N is number of piles, M is max bananas in a pile
+# Space Complexity: O(1) - Only using constant extra space
+#
 # Koko loves to eat bananas. There are n piles of bananas, the ith pile has piles[i] bananas. 
 # The guards have gone and will come back in h hours.
 

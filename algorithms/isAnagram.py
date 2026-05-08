@@ -1,3 +1,6 @@
+# Time Complexity: O(N + M) where N is length of s, M is length of t
+# Space Complexity: O(1) - Hash map stores at most character set size
+#
 # Given two strings s and t
 # return true if t is an anagram of s, and false otherwise.
 

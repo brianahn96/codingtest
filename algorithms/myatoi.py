@@ -1,3 +1,6 @@
+# Time Complexity: O(N) where N is the length of the string
+# Space Complexity: O(1) - Only using constant extra space
+#
 # https://leetcode.com/problems/string-to-integer-atoi/
 
 def myAtoi(s: str) -> int:

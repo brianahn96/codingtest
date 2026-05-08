@@ -1,3 +1,6 @@
+# Time Complexity: O(N) where N is the length of the chars array
+# Space Complexity: O(1) - Modifies array in-place
+#
 # https://leetcode.com/problems/string-compression/description/?envType=study-plan-v2&envId=leetcode-75
 
 def compress(chars: list[str]) -> int:

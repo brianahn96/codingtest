@@ -1,3 +1,6 @@
+# Time Complexity: O(N log N) where N is the length of scoville array
+# Space Complexity: O(1) - Modifies array in-place with heap
+#
 # https://school.programmers.co.kr/learn/courses/30/lessons/42626
 
 # 문제 설명

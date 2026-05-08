@@ -1,3 +1,6 @@
+# Time Complexity: O(N * k) in worst case due to max() on window, O(N) with deque optimization
+# Space Complexity: O(k) for the deque window
+#
 # https://leetcode.com/problems/sliding-window-maximum/description/
 
 from collections import deque

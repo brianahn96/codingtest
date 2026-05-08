@@ -1,3 +1,6 @@
+# Time Complexity: O(N) where N is the length of the array (stack-based approach)
+# Space Complexity: O(N) for the stack
+#
 # Have the function HistogramArea(arr) read the array of non-negative integers stored in arr which will represent the heights of bars on a graph (where each bar width is 1)
 # and determine the largest area underneath the entire bar graph.
 # You can see in the above bar graph that the largest area underneath the graph is covered by the x's. 

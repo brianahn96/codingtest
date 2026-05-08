@@ -5,6 +5,10 @@ answer = 0
 grids = [0] * N
 
 def check(x):
+    """
+    Time Complexity: O(x) which is O(N) in worst case.
+    Space Complexity: O(1)
+    """
     for i in range(x):
         if grids[x] == grids[i]:
             return False
@@ -13,6 +17,10 @@ def check(x):
     return True
 
 def nqueen(n):
+    """
+    Time Complexity: O(N!)
+    Space Complexity: O(N) for recursion stack and grids array.
+    """
     global answer
     if n == N:
         answer += 1

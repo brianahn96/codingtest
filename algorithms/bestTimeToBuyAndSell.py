@@ -1,3 +1,6 @@
+# Time Complexity: O(N) where N is the length of the prices array
+# Space Complexity: O(1) - Only using constant extra space
+#
 # https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
 
 # You are given an array prices where prices[i] is the price of a given stock on the ith day.

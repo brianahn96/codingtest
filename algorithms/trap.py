@@ -1,3 +1,6 @@
+# Time Complexity: O(N) where N is the length of the height array
+# Space Complexity: O(1) for two-pointer, O(N) for stack approach
+#
 # Given n non-negative integers representing an elevation map where the width of each bar is 1
 # compute how much water it can trap after raining.
 

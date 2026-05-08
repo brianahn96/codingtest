@@ -1,3 +1,6 @@
+# Time Complexity: O(N) where N is the length of the array
+# Space Complexity: O(1) - Only using constant extra space
+#
 # https://leetcode.com/problems/increasing-triplet-subsequence/description/?envType=study-plan-v2&envId=leetcode-75
 
 def increasingTriplet(nums: list[int]) -> bool:

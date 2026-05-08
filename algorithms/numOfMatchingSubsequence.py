@@ -1,3 +1,6 @@
+# Time Complexity: O(S + W * L * log(S)) where S is length of s, W is number of words, L is average word length
+# Space Complexity: O(S) for storing character positions in the dictionary
+#
 # https://leetcode.com/problems/number-of-matching-subsequences/description/
 
 from collections import defaultdict
@@ -37,9 +40,11 @@ def numMatchingSubseq(s: str, words: list[str]) -> int:
             ans += 1
             
     return ans
-                
     
 s = "abcde"
 words = ["a","bb","acd","ace"]
 
-print(numMatchingSubseq(s, words))
+s = "dsahjpjauf"
+words = ["ahjpjau","ja","ahbwzgqnuk","tnmlanowax"]
+
+print(numMatchingSubseq2(s, words))

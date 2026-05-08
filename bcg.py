@@ -1,6 +1,10 @@
 def solution(readings):
+    # Time Complexity: O(N * log M) where N is readings count, M is max value
+    # Space Complexity: O(N) for candidates list and counter
     
     def reduce(reading):
+        # Time Complexity: O(log reading) - reduces digits until single digit
+        # Space Complexity: O(log reading) for string conversion
         while reading >= 10:
             reading = sum([int(digit) for digit in str(reading)])
         return reading
@@ -21,6 +25,8 @@ def solution(readings):
 # print(solution([123, 456, 789, 101])) # 출력: 6
 
 def solution2(matrix, commands):
+    # Time Complexity: O(K * R*C) where K is commands count, R*C is matrix size
+    # Space Complexity: O(R*C) for new matrix during rotation
     for cmd in commands:
         parts = cmd.split()
         action = parts[0]
@@ -74,6 +80,8 @@ commands = ["swapRows 0 1", "swapColumns 0 1", "reverseRow 0", "reverseColumn 0"
 # print(solution2(matrix, commands))
 
 def solution3(firstArray, secondArray):
+    # Time Complexity: O(N*L1 + M*L2) where N,M are array lengths, L1,L2 are digit lengths
+    # Space Complexity: O(N*L1) for storing all prefixes
     prefixes = set()
     
     # 1. firstArray의 모든 숫자에서 가능한 모든 접두사를 추출하여 set에 저장

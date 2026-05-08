@@ -1,3 +1,6 @@
+# Time Complexity: O(N) where N is the length of the temperatures array
+# Space Complexity: O(N) for the stack and result array
+#
 # https://leetcode.com/problems/daily-temperatures/description/
 
 # Given an array of integers temperatures represents the daily temperatures, 

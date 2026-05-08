@@ -1,3 +1,6 @@
+# Time Complexity: O(N) where N is the length of the array
+# Space Complexity: O(N) for the set storage
+#
 # https://leetcode.com/problems/contains-duplicate/description/
 
 # Given an integer array nums 

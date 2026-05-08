@@ -6,9 +6,17 @@ operations = list(map(int, input().split(" ")))
 maximum, minimum = -1000000000, 1000000000
         
 def backtracking(n, val):
+    """
+    Time Complexity: O((N-1)!) where N is the number of elements.
+    Space Complexity: O(N) for the recursion stack.
+    """
     global maximum, minimum
     
     def operate(index, operand, value):
+        """
+        Time Complexity: O(1)
+        Space Complexity: O(1)
+        """
         if index == 0:
             return operand + value
         elif index == 1:

@@ -1,3 +1,5 @@
+# Overall Time Complexity: O(N^((T/M)+1)) where N is the number of candidates, T is target, M is min candidate value
+# Overall Space Complexity: O(T/M) for recursion stack depth
 # https://leetcode.com/problems/combination-sum/description/
 
 # Given an array of distinct integers candidates and a target integer target, 
@@ -30,22 +32,35 @@
 # Input: candidates = [2], target = 1
 # Output: []
 
+# Import List for type hinting
 from typing import List
 
+# Define the combinationSum function
 def combinationSum(candidates: List[int], target: int) -> List[List[int]]:
+    # Initialize the list to store valid combinations
     results = []
     
+    # Define the depth-first search helper function
     def dfs(cumul, index, path):
         
+        # Check if the cumulative sum has dropped below zero
         if cumul < 0:
+            # If negative, this path is invalid, so return
             return
         
+        # Check if the target cumulative sum has been reached
         if cumul == 0:
+            # Append a copy of the valid path to results
             results.append(path)
+            # Return to continue searching other paths
             return
         
+        # Iterate through candidates starting from the current index to avoid duplicates
         for i in range(index, len(candidates)):
+            # Recursively call dfs with reduced sum and updated path
             dfs(cumul - candidates[i], i, path + [candidates[i]])
     
+    # Initiate the DFS search with the initial target and an empty path
     dfs(target, 0, [])
+    # Return the collected valid combinations
     return results

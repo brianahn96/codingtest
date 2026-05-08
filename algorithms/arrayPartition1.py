@@ -1,3 +1,6 @@
+# Time Complexity: O(N log N) due to sorting
+# Space Complexity: O(1) or O(N) depending on sorting implementation
+#
 # https://leetcode.com/problems/array-partition/description/
 
 # Given an integer array nums of 2n integers, group these integers into n pairs (a1, b1), (a2, b2), ..., (an, bn) 

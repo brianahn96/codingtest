@@ -10,6 +10,10 @@ minimum = int(1e9)
 visited = [False for _ in range(N)]
 
 def backtracking(depth, index):
+    """
+    Time Complexity: O(C(N, N/2) * N^2)
+    Space Complexity: O(N) for recursion stack and visited list.
+    """
     global minimum
     if depth == N // 2:
         power1, power2 = 0, 0

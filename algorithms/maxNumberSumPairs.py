@@ -1,3 +1,6 @@
+# Time Complexity: O(N log N) due to sorting
+# Space Complexity: O(1) or O(N) depending on sorting implementation
+#
 # https://leetcode.com/problems/max-number-of-k-sum-pairs/description/?envType=study-plan-v2&envId=leetcode-75
 
 def maxOperations(nums: list[int], k: int) -> int:

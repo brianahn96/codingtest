@@ -1,3 +1,6 @@
+# Time Complexity: O(N) where N is the length of the string
+# Space Complexity: O(N) for the stack
+#
 # https://leetcode.com/problems/decode-string/description/
 
 def decodeString(s: str) -> str:

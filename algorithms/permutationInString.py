@@ -1,3 +1,6 @@
+# Time Complexity: O(N * M) where N is length of s2, M is length of s1
+# Space Complexity: O(1) - Counter stores at most 26 lowercase letters
+#
 # Given two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise.
 
 # In other words, return true if one of s1's permutations is the substring of s2.
